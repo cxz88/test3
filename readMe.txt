@@ -1,0 +1,10 @@
+默认路径为http://localhost:8080/ws/service?wsdl
+内镜字典没做，因为没有对应的表信息说明
+PACS推送病人信息给内镜系统只完成了基本流程，没有处理推送
+其他功能都是完成状态
+关于异常处理返回消息这块应该使用枚举来定义错误信息，还有异常类，这里只是简单的处理了下，功能基本都完整
+启动入口位于endoscopy_main里面的EndoscopyApplication中的main方法
+基本功能都已经被我封装好了，基本写业务只要动endoscopy_service中的service中的business包和handler包，其他基本不用动，都已经封装好了
+如果想自定义webservice可以修改endoscopy_service中的config包中的WebServiceConfig类
+关于加密方法以及secret都已经被封装，可以直接修改位于application.yml里面的配置，里面有注释
+由于不知道请求参数的xml是否需要<![CDATA[]]>包装，故做了兼容，无论请求请求参数是否需要<![CDATA[]]>将xml转译都支持自动转换

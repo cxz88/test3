@@ -1,0 +1,17 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://120.48.55.134:3306/test_?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
+    username: root
+    password: woshicxz1996C
+    hikari:
+      connection-timeout: 30000
+      idle-timeout: 60000
+      max-lifetime: 54000
+my:
+  conf:
+    data_enabled: true  #是否在输出xml的时候去除CDATA
+    secret: 8848  #加密用secret
+    sign-method: MD5  #加密方式
