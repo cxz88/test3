@@ -33,6 +33,7 @@ public class MethodAdapter implements ParameterProcessor {
                     if (businessHandler_.support(funCode)) {
                         businessHandler = businessHandler_;
                         cache.put(funCode,businessHandler_);
+                        break;
 
 
                     }
